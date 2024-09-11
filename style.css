@@ -1,63 +1,143 @@
 * {
-    padding: : 0;
-    margin: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Nerko', sans-serif;
-    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-header {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
+nav {
+    height: 80px;
+    background: #fdcc04;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 33px 9%;
-    background: transparent;
-}
-
-body {
-    background: red;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px;
+    justify-content: space-between;
 }
 
-.navlist {
-    display: flex;
-}
-
-.navlist a {
-    color: white;
-    margin-left: 60px;
-    font-size: 15px;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: all .55s ease;
-}
-
-.navlist a:hover {
-    border-bottom: 2px solid white;
-}
-
-#menu-icon {
-    color: white;
-    font-size: 35px;
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
+nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 1.5rem;
 }
 
 .hero {
-    height: 100%;
+    background: #fdcc04;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #000;
+    padding: 0rem 2rem;
+}
+
+.column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.column-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+.hero-image {
+    width: 1000;
+    height: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.slider {
+    position: relative;
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(245.59)
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+}
+
+img.displaySlide {
+    display: block;
 }
